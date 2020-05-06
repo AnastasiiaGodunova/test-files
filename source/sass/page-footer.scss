@@ -1,0 +1,142 @@
+.page-footer {
+  position: relative;
+
+  margin: 0 auto;
+  padding: 0 25px 66px 25px;
+
+  background-color: #e6ecf1;
+}
+
+.page-footer__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.page-footer__text {
+  margin: 0;
+  padding-top: 15px;
+  width: 265px;
+
+  text-align: center;
+  font-size: 12px;
+  line-height: 17px;
+  letter-spacing: 0.5px;
+
+  &--right {
+    padding-top: 0;
+  }
+}
+
+.page-footer__logo {
+  position: absolute;
+  left: 50%;
+  bottom: 7px;
+
+  margin-left: -40px;
+}
+
+.page-footer__list,
+.page-footer__logo-2,
+.page-footer__break {
+  display: none;
+}
+
+.page-footer__icon-share {
+  position: absolute;
+  right: 8px;
+  bottom: 8px;
+}
+
+@media (min-width: $desktop-width) {
+  .page-footer {
+    padding: 30px 35px 0 35px;
+    max-height: 200px;
+  }
+
+  .page-footer__wrapper {
+    margin: 0 auto;
+    max-width: 1210px;
+
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .page-footer__left {
+    display: flex;
+    flex-direction: column;
+    align-self: baseline;
+  }
+
+  .page-footer__text {
+    align-self: flex-start;
+    width: 102%;
+
+    text-align: left;
+    font-size: 15px;
+    line-height: 19px;
+    letter-spacing: 1px;
+
+    &--right {
+      text-align: right;
+    }
+
+    &--tel {
+      padding: 0 0 13px 0;
+
+      font-size: 11px;
+      letter-spacing: 1.3px;
+    }
+  }
+
+  .page-footer__logo {
+    position: initial;
+
+    margin: 62px 0 0 0;
+    width: 83px;
+  }
+
+  .page-footer__list {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+    width: 37%;
+    max-height: 190px;
+  }
+
+  .page-footer__item {
+    width: 57%;
+  }
+
+  .page-footer__item a {
+    font-size: 16px;
+    line-height: 32px;
+    color: $primary-color;
+  }
+
+  .page-footer__item--tel a {
+    font-size: 25px;
+  }
+
+  .page-footer__right {
+    display: flex;
+    flex-direction: column;
+    align-self: baseline;
+    align-items: flex-end;
+  }
+
+  .page-footer__logo-2 {
+    display: block;
+
+    padding-top: 16px;
+  }
+
+  .page-footer__break {
+    display: block;
+  }
+
+  .page-footer__icon-share {
+    display: none;
+  }
+}

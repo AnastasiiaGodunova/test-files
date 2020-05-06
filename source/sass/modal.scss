@@ -1,0 +1,202 @@
+.modal__login-form {
+  display: none;
+}
+
+.modal__login-form {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 25;
+
+  transform: translate(-50%, -50%);
+
+  display: none;
+
+  padding: 23px 24px 17px 24px;
+  width: 200px;
+  box-sizing: border-box;
+
+  background-color: $white;
+}
+
+.modal--show {
+  display: block;
+}
+
+.modal__close {
+  position: absolute;
+  top: -1px;
+  right: 19px;
+  z-index: 4;
+
+  width: 18px;
+  height: 16px;
+
+  background-color: transparent;
+  border: none;
+
+  cursor: pointer;
+
+  &::before,
+  &::after {
+    content: "";
+
+    position: absolute;
+    top: 10px;
+    right: -50px;
+
+    width: 17px;
+    height: 1px;
+
+    background-color: $white;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+}
+
+.login__form-title {
+  margin: 0;
+  padding-bottom: 22px;
+  width: 150px;
+
+  font-size: 10px;
+  line-height: 13px;
+  font-weight: 400;
+  letter-spacing: 0.4px;
+}
+
+.login__form {
+  display: flex;
+  flex-direction: column;
+}
+
+.login__input {
+  margin-bottom: 13px;
+  padding-left: 11px;
+  height: 33px;
+}
+
+.login__input::-webkit-input-placeholder {
+  color: $grey;
+}
+
+.login__input::-moz-placeholder {
+  color: $grey;
+}
+
+.login__input:-ms-input-placeholder {
+  color: $grey;
+}
+
+.login__input:-moz-placeholder {
+  color: $grey;
+}
+
+.login__form-button {
+  padding: 12px 28px;
+
+  color: $white;
+  line-height: 17px;
+  letter-spacing: 0.6px;
+
+  background-color: #d30531;
+  border: none;
+  box-shadow: 1px 1.73px 5px rgba(0, 36, 69, 35);
+
+  cursor: pointer;
+  }
+
+.login__user-help {
+  display: flex;
+  flex-direction: column;
+
+  margin-top: 20px;
+}
+
+.user__help-item {
+  padding-bottom: 10px;
+
+  color: $primary-color;
+  font-size: 10px;
+  letter-spacing: 0.5px;
+}
+
+@media (min-width: $desktop-width) {
+  .modal__login-form {
+    top: 40%;
+
+    padding: 34px 40px 22px 40px;
+    width: 400px;
+  }
+
+  .modal__close {
+    top: 3px;
+    right: 7px;
+
+    width: 18px;
+    height: 16px;
+
+    &::before,
+    &::after {
+      top: 10px;
+      right: -55px;
+
+      width: 26px;
+      height: 2px;
+    }
+  }
+
+  .login__form-title {
+    padding-bottom: 32px;
+    width: 270px;
+
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 0.1px;
+  }
+
+  .login__input {
+    margin-bottom: 19px;
+    padding-left: 21px;
+    height: 55px;
+  }
+
+  .login__input::-webkit-input-placeholder {
+    font-size: 19px;
+  }
+
+  .login__input::-moz-placeholder {
+    font-size: 19px;
+  }
+
+  .login__input:-ms-input-placeholder {
+    font-size: 19px;
+  }
+
+  .login__input:-moz-placeholder {
+    font-size: 19px;
+  }
+
+  .login__form-button {
+    padding: 21px 28px;
+
+    font-size: 20px;
+  }
+
+  .login__user-help {
+    margin-top: 40px;
+  }
+
+  .user__help-item {
+    padding-bottom: 25px;
+
+    font-size: 15px;
+    letter-spacing: 1px;
+  }
+}
